@@ -33,8 +33,7 @@ module Peatio
                                  transaction.to_address,
                                  transaction.amount,
                                  '',
-                                 '',
-                                 options[:subtract_fee].to_s == 'true' # subtract fee from transaction amount.
+                                 ''
                                ])
         transaction.hash = txid
         transaction
