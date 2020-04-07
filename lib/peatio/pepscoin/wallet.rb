@@ -31,7 +31,7 @@ module Peatio
         txid = client.json_rpc(:sendtoaddress,
                                [
                                  transaction.to_address,
-                                 transaction.amount,
+                                 transaction.amount.to_f,
                                  '',
                                  ''
                                ])
