@@ -31,9 +31,7 @@ module Peatio
         txid = client.json_rpc(:sendtoaddress,
                                [
                                  transaction.to_address,
-                                 transaction.amount.to_f,
-                                 '',
-                                 ''
+                                 transaction.amount.to_f
                                ])
         transaction.hash = txid
         transaction

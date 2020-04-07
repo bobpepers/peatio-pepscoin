@@ -25,7 +25,7 @@ module Peatio
       def json_rpc(method, params = [])
         response = connection.post \
           '/',
-          {jsonrpc: '1.0', method: method, params: params}.to_json,
+          {jsonrpc: '1.0', id: 'curltest', method: method, params: params}.to_json,
           {'Accept' => 'application/json',
            'Content-Type' => 'application/json'}
         response.assert_success!
